@@ -7,24 +7,44 @@ export default function ContactPage() {
   const [phone, setPhone] = useState('');
   const [message, setMessage] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [sendError, setSendError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSending(true);
+    setSendError('');
     
-    // Construct WhatsApp link for direct queries
-    const query = `Hello Esplanade Cabs, I have a general query:
-- *Name:* ${name}
-- *Contact:* ${phone}
-- *Query:* ${message}`;
-    
-    const url = `https://api.whatsapp.com/send?phone=919090809910&text=${encodeURIComponent(query)}`;
-    
-    setIsSubmitted(true);
-    // Redirect after short delay or let them click
-    setTimeout(() => {
-      window.open(url, '_blank');
-      setIsSubmitted(false);
-    }, 1000);
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          type: 'contact',
+          name,
+          phone,
+          message,
+        }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        setIsSubmitted(true);
+        setName('');
+        setPhone('');
+        setMessage('');
+        setTimeout(() => setIsSubmitted(false), 5000);
+      } else {
+        setSendError(data.error || 'Failed to send inquiry. Please try again.');
+      }
+    } catch (err) {
+      console.error(err);
+      setSendError('An unexpected error occurred. Please try again.');
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -151,13 +171,24 @@ export default function ContactPage() {
                   />
                 </div>
 
-                <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>
-                  Submit Query via WhatsApp
+                {sendError && (
+                  <p style={{ color: '#EF4444', fontSize: '14px', textAlign: 'center' }}>
+                    {sendError}
+                  </p>
+                )}
+
+                <button 
+                  type="submit" 
+                  className="btn btn-primary" 
+                  style={{ width: '100%' }}
+                  disabled={isSending}
+                >
+                  {isSending ? 'Sending Inquiry...' : 'Send Inquiry'}
                 </button>
 
                 {isSubmitted && (
                   <p style={{ fontSize: '14px', color: 'var(--accent-teal)', textAlign: 'center', fontWeight: '600' }}>
-                    Redirecting you to WhatsApp Chat...
+                    Inquiry sent successfully! We will get back to you shortly.
                   </p>
                 )}
               </form>
