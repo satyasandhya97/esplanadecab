@@ -20,7 +20,15 @@ export async function POST(request: Request) {
           <p>Here are the booking details from the website:</p>
           <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
             <tr>
-              <td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #f0f0f0; width: 40%;">Trip Type:</td>
+              <td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #f0f0f0; width: 40%;">Customer Name:</td>
+              <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">${name}</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #f0f0f0;">Phone Number:</td>
+              <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;"><a href="tel:${phone}">${phone}</a></td>
+            </tr>
+            <tr>
+              <td style="padding: 8px; font-weight: bold; border-bottom: 1px solid #f0f0f0;">Trip Type:</td>
               <td style="padding: 8px; border-bottom: 1px solid #f0f0f0; text-transform: capitalize;">${tripType}</td>
             </tr>
             <tr>
