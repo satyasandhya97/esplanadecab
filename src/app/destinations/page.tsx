@@ -24,24 +24,26 @@ export default function DestinationsPage() {
   });
 
   return (
-    <div style={{ background: '#0B0F19', minHeight: '80vh' }}>
+    <div style={{ background: 'transparent', minHeight: '80vh' }}>
       {/* Header section */}
       <section 
         style={{ 
-          background: 'linear-gradient(rgba(11, 15, 25, 0.8), rgba(11, 15, 25, 0.95)), url("/hero-bg.png")',
+          background: 'linear-gradient(rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.8)), url("/hero-bg.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          padding: '80px 0',
+          marginTop: '-80px', // Pulls page header behind the transparent header
+          paddingTop: '160px', // Offsets header height
+          paddingBottom: '80px',
           textAlign: 'center',
-          borderBottom: '1px solid rgba(255, 255, 255, 0.05)'
+          borderBottom: '1px solid var(--border-light)'
         }}
       >
         <div className="container">
-          <span className="glow-badge" style={{ marginBottom: '12px' }}>Explore Places</span>
-          <h1 style={{ fontSize: '48px', color: '#FFF', fontFamily: 'var(--font-serif)', marginBottom: '8px' }}>
+          <span className="glow-badge" style={{ marginBottom: '12px', color: 'var(--accent-teal)', background: 'rgba(0,172,193,0.1)', borderColor: 'rgba(0,172,193,0.3)' }}>Explore Places</span>
+          <h1 style={{ fontSize: '48px', fontWeight: '800', marginBottom: '8px', color: '#FFFFFF' }}>
             Best Places to Visit
           </h1>
-          <p style={{ fontSize: '16px', color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
+          <p style={{ fontSize: '16px', color: 'rgba(255, 255, 255, 0.9)', maxWidth: '600px', margin: '0 auto' }}>
             Plan your next journey with our reliable cab rentals. Filter by state or search our directory of 15 major tourist hotspots.
           </p>
         </div>
@@ -76,8 +78,8 @@ export default function DestinationsPage() {
                     fontWeight: '600',
                     cursor: 'pointer',
                     border: '1px solid',
-                    borderColor: activeTab === tab ? 'var(--accent-gold)' : 'rgba(255, 255, 255, 0.08)',
-                    background: activeTab === tab ? 'rgba(245, 158, 11, 0.08)' : 'transparent',
+                    borderColor: activeTab === tab ? 'var(--accent-gold)' : 'rgba(15, 23, 42, 0.08)',
+                    background: activeTab === tab ? 'rgba(37, 99, 235, 0.08)' : 'transparent',
                     color: activeTab === tab ? 'var(--accent-gold)' : 'var(--text-secondary)',
                     transition: 'var(--transition-smooth)'
                   }}
@@ -124,7 +126,7 @@ export default function DestinationsPage() {
                 border: '1px dashed rgba(255,255,255,0.1)'
               }}
             >
-              <h3 style={{ fontSize: '20px', marginBottom: '8px', color: '#FFF', fontFamily: 'var(--font-serif)' }}>
+              <h3 style={{ fontSize: '20px', marginBottom: '8px', fontFamily: 'var(--font-serif)' }}>
                 No Destinations Found
               </h3>
               <p>We couldn't find any places matching "{searchQuery}" in region "{activeTab}". Try another search term.</p>

@@ -48,11 +48,11 @@ export default function ContactPage() {
   };
 
   return (
-    <div style={{ background: '#0B0F19', minHeight: '80vh' }}>
+    <div style={{ background: 'transparent', minHeight: '80vh' }}>
       {/* Header section */}
       <section 
         style={{ 
-          background: 'linear-gradient(rgba(11, 15, 25, 0.8), rgba(11, 15, 25, 0.95)), url("/hero-bg.png")',
+          background: 'linear-gradient(rgba(246, 245, 250, 0.75), rgba(246, 245, 250, 0.95)), url("/hero-bg.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           padding: '80px 0',
@@ -62,7 +62,7 @@ export default function ContactPage() {
       >
         <div className="container">
           <span className="glow-badge" style={{ marginBottom: '12px' }}>Get In Touch</span>
-          <h1 style={{ fontSize: '48px', color: '#FFF', fontFamily: 'var(--font-serif)', marginBottom: '8px' }}>
+          <h1 style={{ fontSize: '48px', fontFamily: 'var(--font-serif)', marginBottom: '8px' }}>
             Contact Us
           </h1>
           <p style={{ fontSize: '16px', color: 'var(--text-secondary)' }}>
@@ -80,7 +80,7 @@ export default function ContactPage() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
               <div>
                 <span className="glow-badge" style={{ marginBottom: '12px' }}>Office Channels</span>
-                <h2 style={{ fontSize: '32px', color: '#FFF', fontFamily: 'var(--font-serif)', marginBottom: '16px' }}>
+                <h2 style={{ fontSize: '32px', fontFamily: 'var(--font-serif)', marginBottom: '16px' }}>
                   Reach Our Coordinators
                 </h2>
                 <p>Have questions about specialized tours, outstation fares, or long-term vehicle rentals? Give us a call or send a message directly.</p>
@@ -96,7 +96,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div style={{ fontSize: '13px', color: 'var(--text-muted)' }}>CALL HELPLINE</div>
-                    <a href="tel:+919090809910" style={{ fontSize: '18px', fontWeight: '600', color: '#FFF' }}>+91 90908 09910</a>
+                    <a href="tel:+919090809910" style={{ fontSize: '18px', fontWeight: '600', color: 'var(--text-primary)' }}>+91 90908 09910</a>
                   </div>
                 </div>
 
@@ -109,7 +109,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div style={{ fontSize: '13px', color: 'var(--text-muted)' }}>WHATSAPP CHAT</div>
-                    <a href="https://api.whatsapp.com/send?phone=919090809910" target="_blank" rel="noopener noreferrer" style={{ fontSize: '18px', fontWeight: '600', color: '#FFF' }}>Send Message Now</a>
+                    <a href="https://api.whatsapp.com/send?phone=919090809910" target="_blank" rel="noopener noreferrer" style={{ fontSize: '18px', fontWeight: '600', color: 'var(--text-primary)' }}>Send Message Now</a>
                   </div>
                 </div>
 
@@ -122,7 +122,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div style={{ fontSize: '13px', color: 'var(--text-muted)' }}>OUR BASE ADDRESS</div>
-                    <span style={{ fontSize: '16px', fontWeight: '600', color: '#FFF' }}>Bhubaneswar, Odisha, India</span>
+                    <span style={{ fontSize: '16px', fontWeight: '600', color: 'var(--text-primary)' }}>Bhubaneswar, Odisha, India</span>
                   </div>
                 </div>
               </div>
@@ -130,7 +130,7 @@ export default function ContactPage() {
 
             {/* Form Column */}
             <div className="glass-panel" style={{ padding: '40px' }}>
-              <h3 style={{ fontSize: '24px', color: '#FFF', fontFamily: 'var(--font-serif)', marginBottom: '24px' }}>
+              <h3 style={{ fontSize: '24px', fontFamily: 'var(--font-serif)', marginBottom: '24px' }}>
                 Send An Inquiry
               </h3>
               

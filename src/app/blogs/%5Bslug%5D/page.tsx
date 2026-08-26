@@ -22,7 +22,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
   }
 
   return (
-    <div style={{ background: '#0B0F19', minHeight: '80vh', paddingBottom: '100px' }}>
+    <div style={{ background: 'transparent', minHeight: '80vh', paddingBottom: '100px' }}>
       {/* Blog Hero Header */}
       <section 
         style={{ 
@@ -81,8 +81,8 @@ export default async function BlogDetailPage({ params }: PageProps) {
               marginTop: '60px', 
               padding: '40px', 
               textAlign: 'center',
-              border: '1px solid rgba(245,158,11,0.15)',
-              background: 'radial-gradient(circle, rgba(17,24,39,0.9) 0%, rgba(11,15,25,0.9) 100%)'
+              border: '1px solid rgba(217, 70, 239, 0.25)',
+              background: 'radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, rgba(18, 11, 38, 0.45) 100%)'
             }}
           >
             <h3 style={{ fontSize: '24px', color: '#FFF', fontFamily: 'var(--font-serif)', marginBottom: '8px' }}>
