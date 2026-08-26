@@ -171,8 +171,8 @@ export default function BookingForm() {
             onChange={(e) => setVehicle(e.target.value)}
           >
             {vehicles.map((v) => (
-              <option key={v.id} value={v.id} style={{ backgroundColor: '#111827', color: '#FFF' }}>
-                {v.name} - {v.subName} (Est: ₹{v.pricePerKm}/km)
+              <option key={v.id} value={v.id} style={{ backgroundColor: '#ffffff', color: '#0F172A' }}>
+                {v.name} - {v.subName}
               </option>
             ))}
           </select>
