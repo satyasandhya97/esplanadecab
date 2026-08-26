@@ -4,11 +4,11 @@ import Link from 'next/link';
 
 export default function BlogsPage() {
   return (
-    <div style={{ background: '#0B0F19', minHeight: '80vh' }}>
+    <div style={{ background: 'transparent', minHeight: '80vh' }}>
       {/* Header section */}
       <section 
         style={{ 
-          background: 'linear-gradient(rgba(11, 15, 25, 0.8), rgba(11, 15, 25, 0.95)), url("/hero-bg.png")',
+          background: 'linear-gradient(rgba(246, 245, 250, 0.75), rgba(246, 245, 250, 0.95)), url("/hero-bg.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           padding: '80px 0',
@@ -18,7 +18,7 @@ export default function BlogsPage() {
       >
         <div className="container">
           <span className="glow-badge" style={{ marginBottom: '12px' }}>Travel Insights</span>
-          <h1 style={{ fontSize: '48px', color: '#FFF', fontFamily: 'var(--font-serif)', marginBottom: '8px' }}>
+          <h1 style={{ fontSize: '48px', fontFamily: 'var(--font-serif)', marginBottom: '8px' }}>
             Latest Travel Blogs
           </h1>
           <p style={{ fontSize: '16px', color: 'var(--text-secondary)' }}>
