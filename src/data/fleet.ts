@@ -8,68 +8,95 @@ export interface Vehicle {
   features: string[];
   description: string;
   image: string;
-  pricePerKm: number;
 }
 
 export const vehicles: Vehicle[] = [
   {
-    id: 'ac-hatchback',
-    name: 'AC Hatchback',
-    subName: 'MARUTI WAGON R / SWIFT',
-    type: 'Hatchback',
-    passengers: 4,
-    bags: 2,
-    features: ['Air Conditioning', 'Power Windows', 'USB Charger', 'Ample Legroom'],
-    description: 'Perfect for quick city trips and solo or couple travelers looking for a budget-friendly ride without compromising on comfort and cooling.',
-    image: '/cars/sedan.png', // Fallback or generic hatchback placeholder (using sedan image for neat styling)
-    pricePerKm: 10
+    id: 'toyota-rumion',
+    name: 'Toyota Rumion',
+    subName: 'TOYOTA RUMION MPV',
+    type: 'MPV',
+    passengers: 7,
+    bags: 3,
+    features: ['Dual AC vents', 'Spacious Seating', 'Ample Legroom', 'Comfort Ride'],
+    description: 'A stylish 7-seater MPV offering spacious interiors, smooth ride comfort, and exceptional fuel efficiency. Perfect for family sightseeing trips.',
+    image: '/cars/toyota_rumion.jpg'
   },
   {
-    id: 'ac-sedan',
-    name: 'AC Sedan',
-    subName: 'TOYOTA ETIOS / SWIFT DZIRE',
+    id: 'maruti-ertiga',
+    name: 'Maruti Suzuki Ertiga',
+    subName: 'MARUTI SUZUKI ERTIGA',
+    type: 'MPV',
+    passengers: 7,
+    bags: 3,
+    features: ['Roof AC vents', 'Reclining seats', 'Charging sockets', 'Clean Cabin'],
+    description: 'India\'s most popular family MPV. Features dual-tone interiors, robust dual AC vents for all rows, and smooth suspension for long highway rides.',
+    image: '/cars/maruti_ertiga.jpg'
+  },
+  {
+    id: 'toyota-etios',
+    name: 'Toyota Etios',
+    subName: 'TOYOTA ETIOS SEDAN',
     type: 'Sedan',
     passengers: 4,
     bags: 3,
-    features: ['Air Conditioning', 'Plush Seats', 'Bluetooth Audio', 'Spacious Boot'],
-    description: 'Our most popular choice for business commutes, airport pickups, and comfortable intercity travels with moderate luggage.',
-    image: '/cars/sedan.png',
-    pricePerKm: 12
+    features: ['Strong Air Conditioning', 'Plush Seats', 'Massive Boot Space', 'Smooth Highway Ride'],
+    description: 'Renowned for its unmatched reliability, large legroom, and class-leading trunk capacity. Ideal for outstation travels and airport transfers.',
+    image: '/cars/toyota_etios.jpg'
   },
   {
-    id: 'ac-suv',
-    name: 'AC SUV',
-    subName: 'MARUTI ERTIGA / SCORPIO',
-    type: 'SUV',
-    passengers: 6,
-    bags: 4,
-    features: ['Dual AC vents', 'Reclining Row Seats', 'Heavy Luggage Carrier', 'Charging Points'],
-    description: 'An excellent choice for larger families, corporate staff transfers, or group sightseeing across Odisha’s varied terrains.',
-    image: '/cars/suv.png',
-    pricePerKm: 15
+    id: 'tata-punch',
+    name: 'Tata Punch',
+    subName: 'TATA PUNCH SUB-SUV',
+    type: 'Compact SUV',
+    passengers: 4,
+    bags: 2,
+    features: ['High Ground Clearance', 'Tough Build Safety', 'AC & Power Windows', 'Spacious Cabin'],
+    description: 'A robust compact SUV with 5-star safety build, high seating posture, and excellent agility for navigating both city streets and rural terrains.',
+    image: '/cars/tata_punch.jpg'
   },
   {
-    id: 'ac-innova-crysta',
-    name: 'AC Innova Crysta',
-    subName: 'TOYOTA INNOVA CRYSTA',
+    id: 'toyota-fortuner',
+    name: 'Toyota Fortuner',
+    subName: 'TOYOTA FORTUNER luxury SUV',
     type: 'Premium SUV',
     passengers: 7,
     bags: 5,
-    features: ['Premium Leather Seats', 'Superior Climate Control', 'Captain Seats', 'Roof AC Vents', 'Maximum Safety'],
-    description: 'Premium AC Innova Crysta — the most popular choice for larger families, corporate travel and long Odisha tours. Plush seating, strong AC and powerful highway performance.',
-    image: '/cars/innova-crysta.png',
-    pricePerKm: 18
+    features: ['Premium 4x4 capability', 'Leather upholstery', 'Superior climate control', 'Highest road safety'],
+    description: 'The ultimate premium SUV. Offering command road presence, luxurious interiors, powerful engine performance, and supreme off-road comfort.',
+    image: '/cars/toyota_fortuner.jpg'
   },
   {
-    id: 'ac-tempo-traveller',
-    name: 'AC Tempo Traveller',
+    id: 'tempo-traveller',
+    name: 'Tempo Traveller',
     subName: 'FORCE TEMPO TRAVELLER',
-    type: 'Luxury Cruiser',
+    type: 'Luxury Group Cruiser',
     passengers: 12,
     bags: 10,
-    features: ['Ample Headroom', 'Pushback Seats', 'Individual AC vents', 'LED TV Screen', 'Massive Luggage Space'],
-    description: 'The ultimate group travel choice for pilgrimage trips, family get-togethers, and long holiday explorations with maximum luggage.',
-    image: '/cars/suv.png', // Using SUV representation as a group visual fallback
-    pricePerKm: 24
+    features: ['Pushback seats', 'Individual AC vents', 'Ample headroom', 'Massive luggage compartment'],
+    description: 'Excellent for group tours, family get-togethers, and corporate travels. Equipped with individual passenger vents and extra-large cargo carriage.',
+    image: '/cars/tempo_traveller.jpg'
+  },
+  {
+    id: 'toyota-innova',
+    name: 'Toyota Innova',
+    subName: 'TOYOTA INNOVA CLASSIC',
+    type: 'Premium MPV',
+    passengers: 7,
+    bags: 4,
+    features: ['Multi-row cooling', 'Highly reliable build', 'Spacious captain seats', 'Reclining row options'],
+    description: 'The legendary standard of comfort and durability in India. Offers reclining captain row seats, high reliability, and excellent ride quality.',
+    image: '/cars/toyota_innova.jpg'
+  },
+  {
+    id: 'toyota-innova-crysta',
+    name: 'Toyota Innova Crysta',
+    subName: 'TOYOTA INNOVA CRYSTA PREMIUM',
+    type: 'Luxury MPV',
+    passengers: 7,
+    bags: 5,
+    features: ['Premium captain chairs', 'Triple-zone climate control', 'Ambient cabin lighting', 'Top-tier safety airbags'],
+    description: 'Experience luxury travel at its best. Features executive leather captain seats, advanced safety equipment, and quiet premium cabin insulation.',
+    image: '/cars/toyota_innova_crysta.jpg'
   }
 ];

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import Link from 'next/link';
+import Header from '@/components/header';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -35,36 +36,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body>
-        {/* Navigation Header */}
-        <header className="header-nav">
-          <div className="container header-container">
-            <Link href="/" className="logo-text">
-              Esplanade<span className="logo-accent">Cabs</span>
-            </Link>
-            
-            <nav>
-              <ul className="nav-links">
-                <li><Link href="/" className="nav-link">Home</Link></li>
-                <li><Link href="/about" className="nav-link">About</Link></li>
-                <li><Link href="/destinations" className="nav-link">Destinations</Link></li>
-                <li><Link href="/blogs" className="nav-link">Blogs</Link></li>
-                <li><Link href="/contact" className="nav-link">Contact</Link></li>
-              </ul>
-            </nav>
+        {/* Animated Background Glow Blobs */}
+        <div className="glow-bg-container">
+          <div className="glow-bg-blob blob-purple" />
+          <div className="glow-bg-blob blob-cyan" />
+          <div className="glow-bg-blob blob-pink" />
+        </div>
 
-            <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-              <a href="tel:+919090809910" className="nav-link" style={{ fontWeight: '600', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                </svg>
-                +91 90908 09910
-              </a>
-              <Link href="/#book-now" className="btn btn-primary" style={{ padding: '10px 20px', borderRadius: '8px', fontSize: '14px' }}>
-                Book Taxi
-              </Link>
-            </div>
-          </div>
-        </header>
+        {/* Dynamic Navigation Header */}
+        <Header />
 
         {/* Page Content */}
         <main style={{ minHeight: '80vh', paddingTop: '80px' }}>
