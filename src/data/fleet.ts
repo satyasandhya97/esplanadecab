@@ -42,7 +42,29 @@ export const vehicles: Vehicle[] = [
     bags: 3,
     features: ['Strong Air Conditioning', 'Plush Seats', 'Massive Boot Space', 'Smooth Highway Ride'],
     description: 'Renowned for its unmatched reliability, large legroom, and class-leading trunk capacity. Ideal for outstation travels and airport transfers.',
-    image: '/cars/toyota_etios.jpg'
+    image: '/assests/Toyota Etios.jpg'
+  },
+  {
+    id: 'maruti-dzire',
+    name: 'Maruti Suzuki Dzire',
+    subName: 'MARUTI SUZUKI DZIRE',
+    type: 'Sedan',
+    passengers: 4,
+    bags: 2,
+    features: ['AC & Heater', 'Comfortable Rear Seat', 'Excellent fuel efficiency', 'Clean cabin'],
+    description: 'India\'s favorite compact sedan. Known for its soft ride quality, comfortable cabin space, and excellent reliability.',
+    image: '/assests/Maruti dezir1.jpg'
+  },
+  {
+    id: 'honda-city',
+    name: 'Honda City',
+    subName: 'HONDA CITY SEDAN',
+    type: 'Premium Sedan',
+    passengers: 4,
+    bags: 3,
+    features: ['Automatic AC', 'Sunroof', 'Leather seats', 'Plush ride'],
+    description: 'The absolute benchmark for sedan comfort. Smooth CVT ride, extremely comfortable seating, and premium cabin experience.',
+    image: '/assests/Honda City2.jpg'
   },
   {
     id: 'tata-punch',
@@ -53,7 +75,18 @@ export const vehicles: Vehicle[] = [
     bags: 2,
     features: ['High Ground Clearance', 'Tough Build Safety', 'AC & Power Windows', 'Spacious Cabin'],
     description: 'A robust compact SUV with 5-star safety build, high seating posture, and excellent agility for navigating both city streets and rural terrains.',
-    image: '/cars/tata_punch.jpg'
+    image: '/assests/Tata punch1.jpg'
+  },
+  {
+    id: 'tata-curvv',
+    name: 'Tata Curvv',
+    subName: 'TATA CURVV COUPE SUV',
+    type: 'SUV',
+    passengers: 5,
+    bags: 3,
+    features: ['Panoramic sunroof', 'Ventilated seats', 'Large boot', 'Premium design'],
+    description: 'A futuristic coupe SUV with segment-first premium features, high safety rating, and exceptional highway stability.',
+    image: '/assests/Tata curve1.jpg'
   },
   {
     id: 'toyota-fortuner',
@@ -64,7 +97,7 @@ export const vehicles: Vehicle[] = [
     bags: 5,
     features: ['Premium 4x4 capability', 'Leather upholstery', 'Superior climate control', 'Highest road safety'],
     description: 'The ultimate premium SUV. Offering command road presence, luxurious interiors, powerful engine performance, and supreme off-road comfort.',
-    image: '/cars/toyota_fortuner.jpg'
+    image: '/assests/Fortune1.jpg'
   },
   {
     id: 'tempo-traveller',
@@ -75,7 +108,18 @@ export const vehicles: Vehicle[] = [
     bags: 10,
     features: ['Pushback seats', 'Individual AC vents', 'Ample headroom', 'Massive luggage compartment'],
     description: 'Excellent for group tours, family get-togethers, and corporate travels. Equipped with individual passenger vents and extra-large cargo carriage.',
-    image: '/cars/tempo_traveller.jpg'
+    image: '/assests/Force Travler1.jpg'
+  },
+  {
+    id: 'force-urbania',
+    name: 'Force Urbania',
+    subName: 'FORCE URBANIA LUXURY',
+    type: 'Luxury Group Cruiser',
+    passengers: 13,
+    bags: 12,
+    features: ['Individual AC vents', 'Reclining seats', 'Spacious headroom', 'Smart look'],
+    description: 'A premium, modern group cruiser. Features dual zone AC, ergonomic seats, ample headroom, and top-notch passenger comfort.',
+    image: '/assests/Force Arbania.jpg'
   },
   {
     id: 'toyota-innova',
@@ -97,6 +141,6 @@ export const vehicles: Vehicle[] = [
     bags: 5,
     features: ['Premium captain chairs', 'Triple-zone climate control', 'Ambient cabin lighting', 'Top-tier safety airbags'],
     description: 'Experience luxury travel at its best. Features executive leather captain seats, advanced safety equipment, and quiet premium cabin insulation.',
-    image: '/cars/toyota_innova_crysta.jpg'
+    image: '/assests/Innova Crysta1.jpg'
   }
 ];

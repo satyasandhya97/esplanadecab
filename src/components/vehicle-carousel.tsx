@@ -14,21 +14,21 @@ interface CarouselItem {
 const carouselItems: CarouselItem[] = [
   {
     id: 1,
-    image: '/cars/toyota_innova_crysta.jpg',
+    image: '/assests/Innova Crysta1.jpg',
     title: 'Premium Group Tours & Travels',
     description: 'Travel across Odisha in supreme style with our luxurious 7-seater Toyota Innova Crysta, featuring reclining captain chairs and ambient climate control.',
     tag: 'Premium Travel'
   },
   {
     id: 2,
-    image: '/cars/toyota_fortuner.jpg',
+    image: '/assests/Fortune1.jpg',
     title: 'Commanding Highway Comfort',
     description: 'Conquer any terrain with the powerful Toyota Fortuner SUV. Perfect for rugged outstation journeys and premium business transfers.',
     tag: 'Premium SUV'
   },
   {
     id: 3,
-    image: '/cars/tempo_traveller.jpg',
+    image: '/assests/Force Travler1.jpg',
     title: 'Group Tourism & Pilgrimages',
     description: 'Comfortable Force Tempo Traveller with pushback seats and individual air conditioning. Ideal for group tours to Puri Jagannath Temple and Konark.',
     tag: 'Group Travel'
@@ -42,7 +42,7 @@ const carouselItems: CarouselItem[] = [
   },
   {
     id: 5,
-    image: '/cars/toyota_etios.jpg',
+    image: '/assests/Toyota Etios.jpg',
     title: 'Reliable Airport & City Rides',
     description: 'Enjoy a smooth, hassle-free ride in our classic Toyota Etios sedan, famous for its massive boot capacity and quiet passenger cabin.',
     tag: 'Comfort Sedan'
@@ -122,6 +122,7 @@ export default function VehicleCarousel() {
                   src={item.image}
                   alt={item.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   priority={index === 0}
                   className="hover-zoom-image"
                   style={{

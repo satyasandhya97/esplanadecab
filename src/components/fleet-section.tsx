@@ -54,6 +54,7 @@ export default function FleetSection() {
               src={v.image}
               alt={v.name}
               fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="hover-zoom-image"
               style={{
                 objectFit: 'cover',
