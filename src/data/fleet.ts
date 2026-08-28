@@ -130,7 +130,7 @@ export const vehicles: Vehicle[] = [
     bags: 4,
     features: ['Multi-row cooling', 'Highly reliable build', 'Spacious captain seats', 'Reclining row options'],
     description: 'The legendary standard of comfort and durability in India. Offers reclining captain row seats, high reliability, and excellent ride quality.',
-    image: '/cars/toyota_innova.jpg'
+    image: '/cars/toyota_innova.jpeg'
   },
   {
     id: 'toyota-innova-crysta',
