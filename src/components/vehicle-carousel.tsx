@@ -35,7 +35,7 @@ const carouselItems: CarouselItem[] = [
   },
   {
     id: 4,
-    image: '/cars/toyota_rumion.jpg',
+    image: '/cars/toyota_rumion.jpeg',
     title: 'Modern Family Sightseeing',
     description: 'Experience city sightseeing and outstation trips with the smart, fuel-efficient 7-seater Toyota Rumion. Elegant and budget-friendly.',
     tag: 'Family MPV'

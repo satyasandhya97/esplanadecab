@@ -20,7 +20,7 @@ export const vehicles: Vehicle[] = [
     bags: 3,
     features: ['Dual AC vents', 'Spacious Seating', 'Ample Legroom', 'Comfort Ride'],
     description: 'A stylish 7-seater MPV offering spacious interiors, smooth ride comfort, and exceptional fuel efficiency. Perfect for family sightseeing trips.',
-    image: '/cars/toyota_rumion.jpg'
+    image: '/cars/toyota_rumion.jpeg'
   },
   {
     id: 'maruti-ertiga',
@@ -31,7 +31,7 @@ export const vehicles: Vehicle[] = [
     bags: 3,
     features: ['Roof AC vents', 'Reclining seats', 'Charging sockets', 'Clean Cabin'],
     description: 'India\'s most popular family MPV. Features dual-tone interiors, robust dual AC vents for all rows, and smooth suspension for long highway rides.',
-    image: '/cars/maruti_ertiga.jpg'
+    image: '/cars/maruti_ertiga.jpeg'
   },
   {
     id: 'toyota-etios',
