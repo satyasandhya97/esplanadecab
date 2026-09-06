@@ -86,10 +86,10 @@ export async function POST(request: Request) {
 
     if (!gmailUser || !gmailPass) {
       console.warn("WARNING: GMAIL_USER or GMAIL_PASS environment variables are not set. Simulating email send successfully.");
-      return NextResponse.json({ 
-        success: true, 
-        simulated: true, 
-        message: "Email details logged in server console. To enable actual dispatch, please set GMAIL_USER and GMAIL_PASS in your environment." 
+      return NextResponse.json({
+        success: true,
+        simulated: true,
+        message: "Email details logged in server console. To enable actual dispatch, please set GMAIL_USER and GMAIL_PASS in your environment."
       });
     }
 
