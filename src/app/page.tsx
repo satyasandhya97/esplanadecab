@@ -1,15 +1,12 @@
 import React from 'react';
 import BookingForm from '@/components/booking-form';
 import FleetSection from '@/components/fleet-section';
-import DestinationCard from '@/components/destination-card';
+import HomeDestinations from '@/components/home-destinations';
 import VehicleCarousel from '@/components/vehicle-carousel';
-import { destinations } from '@/data/destinations';
 import { blogs } from '@/data/blogs';
 import Link from 'next/link';
 
 export default function HomePage() {
-  // Take top 6 destinations for home page preview across Kolkata, Hyderabad, Vizag, Jharkhand, and Odisha
-  const featuredDestinations = destinations.slice(0, 6);
 
   return (
     <div>
@@ -224,30 +221,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Destinations Section */}
-      <section className="section-padding" style={{ background: '#FFFFFF' }}>
-        <div className="container">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '60px', flexWrap: 'wrap', gap: '20px' }}>
-            <div>
-              <span className="glow-badge" style={{ marginBottom: '12px' }}>Destinations Guide</span>
-              <h2 className="heading-uppercase" style={{ fontSize: '36px' }}>
-                Best Places to Visit
-              </h2>
-            </div>
-            <Link href="/destinations" className="btn btn-secondary">
-              Explore All {destinations.length} Spots
-            </Link>
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '30px' }}>
-            {featuredDestinations.map((dest) => (
-              <div key={dest.id}>
-                <DestinationCard destination={dest} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Complete 37 Destinations Section */}
+      <HomeDestinations />
 
       {/* Asymmetric Day Trip Offer Section (Inspired by Cruise Deals layout in 99designs - pricing removed) */}
       <section id="special-offers" className="section-padding" style={{ background: 'var(--bg-section-alt)', overflow: 'hidden', borderTop: '1px solid var(--border-light)', borderBottom: '1px solid var(--border-light)' }}>
