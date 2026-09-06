@@ -97,13 +97,13 @@ export default function VehicleCarousel() {
   };
 
   return (
-    <div 
+    <div
       className="carousel-card"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
       {/* Slides Container */}
-      <div 
+      <div
         className="carousel-slides-wrapper"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
@@ -130,7 +130,7 @@ export default function VehicleCarousel() {
                     borderRadius: '12px'
                   }}
                 />
-                
+
                 {/* Floating Category Badge */}
                 <div style={{ position: 'absolute', top: '16px', left: '16px', zIndex: 10 }}>
                   <span className="glow-badge" style={{ background: 'var(--accent-gold)', color: '#FFFFFF', border: 'none' }}>
@@ -223,10 +223,10 @@ export default function VehicleCarousel() {
       </button>
 
       {/* Dot Indicators */}
-      <div 
+      <div
         style={{
           position: 'absolute',
-          bottom: '16px',
+          bottom: '5px',
           left: '50%',
           transform: 'translateX(-50%)',
           display: 'flex',
