@@ -7,7 +7,8 @@ interface DestinationCardProps {
   destination: Destination;
 }
 
-const getDestinationImage = (id: string) => {
+const getDestinationImage = (destination: Destination) => {
+  if (destination.image) return destination.image;
   const images: Record<string, string> = {
     'jagannath-temple': '/assests/jagannathpuri-L897Iz2Y.jpg',
     'konark-sun-temple': '/assests/suntempleKonark-gJAyjDUN.jpg',
@@ -25,7 +26,7 @@ const getDestinationImage = (id: string) => {
     'satkosia-gorge': '/assests/Satkosia-0fnPzX2M.jpg',
     'chitrakoot-falls': '/assests/chitrakotwaterfalls-u9qgl7JW.jpg',
   };
-  return images[id] || '/assests/jagannathpuri-L897Iz2Y.jpg';
+  return images[destination.id] || '/assests/jagannathpuri-L897Iz2Y.jpg';
 };
 
 // Generate deterministic star rating based on destination name length
@@ -38,7 +39,7 @@ const getMockRating = (name: string) => {
 
 export default function DestinationCard({ destination }: DestinationCardProps) {
   const { rating, reviewsCount } = getMockRating(destination.name);
-  const imageUrl = getDestinationImage(destination.id);
+  const imageUrl = getDestinationImage(destination);
 
   const handleQuickBook = () => {
     // Scroll to the booking form
